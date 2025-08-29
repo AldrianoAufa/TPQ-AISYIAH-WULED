@@ -1,0 +1,375 @@
+ body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e0f2f2;
+    /* Warna latar belakang hijau muda dari gambar index.php */
+}
+
+/* Mengatur tinggi maksimum untuk dropdown agar bisa di-scroll */
+select#id_siswa_pay,
+select#id_siswa_pay_spp2,
+select#id_siswa_pay_biaya_lain,
+select#id_biaya_type {
+    max-height: 300px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    width: 100%;
+}
+
+/* Gaya umum untuk container dan card */
+.container {
+    max-width: 1200px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* shadow-md */
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+
+/* Custom styles for the admin panel header, matching index.php's aesthetic */
+.admin-header-card {
+    background: linear-gradient(90deg, #004d40 0%, #00796b 100%);
+    /* Gradien hijau gelap ke teal */
+    color: white;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-header-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.admin-header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.admin-title-arabic {
+    font-family: 'Noto Naskh Arabic', serif;
+    /* Font Naskh untuk teks Arab */
+    font-size: 2.5rem;
+    /* Ukuran lebih besar */
+    color: #f0fdf4;
+    /* Warna hijau sangat muda untuk kontras */
+    margin-bottom: 0.75rem;
+    display: block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Bayangan teks */
+    direction: rtl;
+    /* Untuk penulisan Arab dari kanan ke kiri */
+    line-height: 1.2;
+}
+
+.admin-main-title {
+    font-family: 'Inter', sans-serif;
+    /* Tetap Inter untuk teks Latin */
+    font-size: 2.5rem;
+    /* Ukuran font utama */
+    font-weight: 800;
+    /* Extra bold */
+    color: #ffffff;
+    /* Putih bersih */
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.admin-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    /* Ukuran font untuk teks selamat datang */
+    color: #e0e7ff;
+    /* Biru muda keunguan */
+    font-weight: 600;
+}
+
+.admin-username {
+    color: #b2f5ea;
+    /* light teal */
+    font-weight: 800;
+}
+
+/* Navigation Tabs (matching index.php) */
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    /* py-3 px-6 */
+    border-radius: 0.5rem;
+    /* rounded-md */
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    /* font-semibold */
+    text-decoration: none;
+    /* remove underline */
+    display: inline-flex;
+    /* for better alignment with icon if any */
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    /* prevent wrapping */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    /* Bayangan halus */
+}
+
+.tab-button.active {
+    background: linear-gradient(90deg, #004d40 0%, #00796b 100%);
+    /* Gradien hijau gelap ke teal */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Bayangan lebih dalam */
+    transform: translateY(-2px);
+    /* Sedikit naik */
+}
+
+.tab-button:not(.active) {
+    background-color: #e0f2f1;
+    /* Hijau mint sangat muda */
+    color: #004d40;
+    /* Hijau gelap */
+}
+
+.tab-button:not(.active):hover {
+    background-color: #b2dfdb;
+    /* Teal muda */
+    color: #004d40;
+    /* Hijau gelap */
+    transform: translateY(-1px);
+    /* Sedikit naik saat hover */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    /* Bayangan saat hover */
+}
+
+/* Logout Button (matching index.php) */
+.logout-button-admin {
+    background-color: #ef4444;
+    /* red-500 */
+    color: #ffffff;
+    font-weight: 700;
+    /* font-bold */
+    padding: 0.875rem 1.75rem;
+    /* Meningkatkan padding */
+    border-radius: 0.375rem;
+    /* rounded-md */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* shadow-md */
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    /* Tambahkan margin atas */
+}
+
+.logout-button-admin:hover {
+    background-color: #dc2626;
+    /* red-600 */
+    transform: translateY(-1px);
+}
+
+/* General button styles for forms */
+.btn {
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #00796b;
+    /* Teal dari index.php */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #004d40;
+    /* Darker teal */
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background-color: #22c55e;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #16a34a;
+    transform: translateY(-1px);
+}
+
+.btn-warning {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #d97706;
+    transform: translateY(-1px);
+}
+
+/* Alert messages */
+.alert {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+}
+
+/* Table styles */
+.table-container {
+    overflow-x: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background-color: #f9fafb;
+    color: #374151;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+    border-color: #00796b;
+    /* Teal dari index.php */
+    box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.4);
+    /* Shadow teal */
+    outline: none;
+}
+
+/* Pagination links */
+.pagination-link {
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0.2rem;
+    border-radius: 0.375rem;
+    background-color: #e5e7eb;
+    color: #4b5563;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.pagination-link:hover {
+    background-color: #d1d5db;
+}
+
+.pagination-link.active {
+    background-color: #00796b;
+    /* Teal dari index.php */
+    color: white;
+}
+
+/* Responsive adjustments for admin header */
+@media (max-width: 768px) {
+    .admin-header-card {
+        padding: 1.5rem;
+    }
+
+    .admin-title-arabic {
+        font-size: 2rem;
+    }
+
+    .admin-main-title {
+        font-size: 1.75rem;
+    }
+
+    .admin-subtitle {
+        font-size: 1rem;
+    }
+
+    .logout-button-admin {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }

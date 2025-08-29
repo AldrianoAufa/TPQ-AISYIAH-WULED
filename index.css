@@ -1,0 +1,361 @@
+ body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e0f2f2;
+    /* Warna latar belakang hijau muda dari gambar */
+}
+
+.container {
+    max-width: 1024px;
+    /* Meningkatkan max-width untuk tampilan yang lebih besar */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* shadow-md */
+}
+
+.header-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* shadow-xl */
+    padding: 2.5rem;
+    /* Meningkatkan padding */
+    text-align: center;
+}
+
+.total-kekurangan-card {
+    background: linear-gradient(90deg, #004d40 0%, #00796b 100%);
+    /* Gradien hijau gelap ke teal */
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    /* py-3 px-6 */
+    border-radius: 0.5rem;
+    /* rounded-md */
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    /* font-semibold */
+    text-decoration: none;
+    /* remove underline */
+    display: inline-flex;
+    /* for better alignment with icon if any */
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    /* prevent wrapping */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    /* Bayangan halus */
+}
+
+.tab-button.active {
+    background: linear-gradient(90deg, #004d40 0%, #00796b 100%);
+    /* Gradien hijau gelap ke teal */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Bayangan lebih dalam */
+    transform: translateY(-2px);
+    /* Sedikit naik */
+}
+
+.tab-button:not(.active) {
+    background-color: #e0f2f1;
+    /* Hijau mint sangat muda */
+    color: #004d40;
+    /* Hijau gelap */
+}
+
+.tab-button:not(.active):hover {
+    background-color: #b2dfdb;
+    /* Teal muda */
+    color: #004d40;
+    /* Hijau gelap */
+    transform: translateY(-1px);
+    /* Sedikit naik saat hover */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    /* Bayangan saat hover */
+}
+
+.logout-button {
+    background-color: #ef4444;
+    /* red-500 */
+    color: #ffffff;
+    font-weight: 700;
+    /* font-bold */
+    padding: 0.875rem 1.75rem;
+    /* Meningkatkan padding */
+    border-radius: 0.375rem;
+    /* rounded-md */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* shadow-md */
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #dc2626;
+    /* red-600 */
+    transform: translateY(-1px);
+}
+
+.calendar-header {
+    background-color: #f7fafc;
+    /* gray-100 */
+    border-bottom: 1px solid #e2e8f0;
+    /* gray-300 */
+}
+
+.calendar-day-name {
+    font-weight: 600;
+    /* font-semibold */
+    color: #4a5568;
+    /* gray-700 */
+}
+
+.calendar-cell {
+    min-height: 90px;
+    /* Meningkatkan tinggi sel kalender */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    /* Meningkatkan padding */
+    border-radius: 0.375rem;
+    /* rounded-md */
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    /* text-base */
+    text-align: center;
+}
+
+.calendar-cell span.text-lg {
+    font-size: 1.25rem;
+    /* text-xl */
+}
+
+.calendar-cell span.text-xs {
+    font-size: 0.875rem;
+    /* text-sm */
+}
+
+.calendar-cell.inactive {
+    background-color: #e2e8f0;
+    /* gray-200 */
+    color: #a0aec0;
+    /* gray-400 */
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.calendar-cell.friday-holiday {
+    background-color: #ef4444;
+    /* red-500 */
+    color: #ffffff;
+    font-weight: 700;
+    /* font-bold */
+}
+
+.calendar-cell.paid {
+    background-color: #b2f5ea;
+    /* green-200 */
+    color: #2f855a;
+    /* green-800 */
+}
+
+.calendar-cell.unpaid {
+    background-color: #bee3f8;
+    /* blue-100 */
+    color: #2b6cb0;
+    /* blue-800 */
+}
+
+.calendar-cell.unpaid:hover {
+    background-color: #90cdf4;
+    /* blue-200 */
+}
+
+.total-spp-box {
+    background-color: #16a085;
+    /* Warna hijau gelap dari gambar */
+    color: #ffffff;
+    padding: 2rem;
+    /* Meningkatkan padding */
+    border-radius: 0.75rem;
+    /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* shadow-md */
+    text-align: center;
+}
+
+.title-arabic {
+    font-family: 'Amiri', serif;
+    /* Menggunakan font Amiri untuk teks Arab */
+    font-size: 2rem;
+    /* Ukuran lebih kecil dari sebelumnya, lebih elegan */
+    color: #004d40;
+    /* Warna hijau gelap yang kontras dengan latar belakang terang */
+    margin-bottom: 0.5rem;
+    display: block;
+    text-shadow: none;
+    /* Hapus text-shadow */
+    opacity: 0.8;
+}
+
+.biaya-lain-table th {
+    background-color: #edf2f7;
+    /* gray-200 */
+    color: #4a5568;
+    /* gray-600 */
+    font-weight: 500;
+    /* font-medium */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    /* tracking-wider */
+    padding: 1rem 1.25rem;
+    /* Meningkatkan padding */
+    text-align: left;
+    font-size: 0.95rem;
+    /* Sedikit lebih besar */
+}
+
+.biaya-lain-table td {
+    padding: 1rem 1.25rem;
+    /* Meningkatkan padding */
+    white-space: nowrap;
+    color: #2d3748;
+    /* gray-800 */
+    font-size: 0.95rem;
+    /* Sedikit lebih besar */
+}
+
+.biaya-lain-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsif untuk SPP Mingguan */
+.weekly-spp-table th,
+.weekly-spp-table td {
+    font-size: 0.9rem;
+    /* Default font size for table cells */
+    padding: 0.75rem 0.5rem;
+    /* Default padding for table cells */
+}
+
+.weekly-spp-table .weekly-spp-cell span.text-sm {
+    font-size: 0.8rem;
+    /* Default for date range */
+}
+
+.weekly-spp-table .weekly-spp-cell span.text-xs {
+    font-size: 0.7rem;
+    /* Default for status */
+}
+
+@media (max-width: 768px) {
+
+    /* Untuk perangkat yang lebih kecil dari tablet (mobile) */
+    .container {
+        padding: 1rem;
+        /* Mengurangi padding di mobile */
+    }
+
+    .header-card,
+    .total-kekurangan-card,
+    .card {
+        padding: 1.5rem;
+        /* Mengurangi padding di mobile */
+    }
+
+    .header-card h1 {
+        font-size: 1.75rem;
+        /* text-3xl */
+    }
+
+    .total-kekurangan-card p.text-5xl {
+        font-size: 3.5rem;
+        /* Lebih kecil di mobile */
+    }
+
+    .tab-button {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .logout-button {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .calendar-cell {
+        min-height: 70px;
+        /* Lebih kecil di mobile */
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        /* text-sm */
+    }
+
+    .calendar-cell span.text-lg {
+        font-size: 1rem;
+        /* text-base */
+    }
+
+    .calendar-cell span.text-xs {
+        font-size: 0.7rem;
+        /* text-xs */
+    }
+
+    /* Perbaikan Responsif untuk SPP Mingguan */
+    .weekly-spp-table th,
+    .weekly-spp-table td {
+        font-size: 0.6rem;
+        /* Lebih kecil lagi untuk header dan sel tabel mingguan */
+        padding: 0.3rem 0.05rem;
+        /* Padding lebih kecil */
+    }
+
+    .weekly-spp-table th:first-child,
+    .weekly-spp-table td:first-child {
+        min-width: 55px;
+        /* Memberi lebar minimum untuk kolom bulan */
+        padding-left: 0.2rem;
+        /* Sedikit padding kiri untuk kolom bulan */
+        padding-right: 0.2rem;
+        /* Sedikit padding kanan untuk kolom bulan */
+    }
+
+    .weekly-spp-table .weekly-spp-cell span.text-sm {
+        font-size: 0.55rem;
+        /* Font size untuk rentang tanggal */
+        line-height: 1;
+        /* Mengurangi line height */
+    }
+
+    .weekly-spp-table .weekly-spp-cell span.text-xs {
+        font-size: 0.5rem;
+        /* Font size untuk status */
+        line-height: 1;
+        /* Mengurangi line height */
+    }
+
+    .weekly-spp-table .weekly-spp-cell {
+        min-height: 50px;
+        /* Mengurangi tinggi minimum sel */
+        padding: 0.2rem;
+        /* Padding sel lebih kecil */
+    }
+
+    .biaya-lain-table th,
+    .biaya-lain-table td {
+        font-size: 0.8rem;
+        padding: 0.75rem 0.75rem;
+    }
